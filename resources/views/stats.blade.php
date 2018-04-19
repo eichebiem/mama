@@ -133,9 +133,15 @@
 
 
                                    <div class="form-group">
-                                        <h4>Research Class</h4>
+                                        <label for="company_address">Research Class *</label>
+                                        <select name="research_class" class="form-control" id="company_address">
+                                             <option value="" selected disabled>Select Research Class</option>
+                                             <option value="Undergrad">Undergrad</option>
+                                             <option value="Post Grad">Post Grad</option>
+                                             <option value="Corporate / Business">Corporate / Business</option>
+                                        </select>
 
-                                        <ul>
+                                        <!-- <ul>
                                              <li>
                                                   <input type="checkbox" name="research_class" id="Undergrad" class="research_class" value="Undergrad"> 
                                                   <label for="Undergrad">Undergrad</label>
@@ -151,7 +157,7 @@
                                                   <label for="Corporate / Business">Corporate / Business</label>
                                              </li>
 
-                                        </ul>
+                                        </ul> -->
                                         
                                    </div>
 
