@@ -76,7 +76,7 @@
                                    @csrf
 
                                    <div class="form-group">
-                                        <h4>Select Course</h4>
+                                        <h4>Select Course</h4>   
 
                                         <ul>
                                              <li>
@@ -99,8 +99,9 @@
                                                   <label for="word">MS Word</label>
                                              </li>
                                         </ul>
-                                        
                                    </div>
+
+                                   
 
                                    <div class="form-group" id="ewan" style="display:none">
                                         <h4>Select EWAN.....</h4>
@@ -109,21 +110,33 @@
                                              <li>
                                                   <input type="checkbox" name="ewan" id="basic" class="ewan" value="Basic"> 
                                                   <label for="basic">Basic</label>
+
+                                                  <ul id="days1" style="display:none">
+                                                       <li>
+                                                            <input type="checkbox" name="days" id="11" class="days1" disabled="true" value="1 Day"> 
+                                                            <label for="11">1 Day</label>
+                                                       </li>
+
+                                                       <li>
+                                                            <input type="checkbox" name="days" id="22" class="days1" disabled="true" value="2 Days"> 
+                                                            <label for="22">2 Days</label>
+                                                       </li>
+                                                  </ul>
                                              </li>
 
                                              <li>
                                                   <input type="checkbox" name="ewan" id="inter" class="ewan" value="Intermediate & Advanced"> 
                                                   <label for="inter">Intermediate & Advanced</label>
 
-                                                  <ul id="days" style="display:none">
+                                                  <ul id="days2" style="display:none">
                                                        <li>
-                                                            <input type="checkbox" name="days" id="1" class="days" disabled="true" value="1 Day"> 
-                                                            <label for="1">1 Day</label>
+                                                            <input type="checkbox" name="days" id="111" class="days2" disabled="true" value="1 Day"> 
+                                                            <label for="111">1 Day</label>
                                                        </li>
 
                                                        <li>
-                                                            <input type="checkbox" name="days" id="2" class="days" disabled="true" value="2 Days"> 
-                                                            <label for="2">2 Days</label>
+                                                            <input type="checkbox" name="days" id="222" class="days2" disabled="true" value="2 Days"> 
+                                                            <label for="222">2 Days</label>
                                                        </li>
                                                   </ul>
                                              </li>
@@ -140,6 +153,8 @@
                                         </ul>
                                         
                                    </div>
+
+                                   
 
                                    <hr>
 
@@ -221,19 +236,23 @@
           });
 
           $('#inter').click(function(){
-               $('#days').show();
+               $('#days2').show();
+               $('#days1').hide();
           });
 
           $('#basic').click(function(){
-               $('#days').hide();
+               $('#days2').hide();
+               $('#days1').show();
           });
 
           $('#tutorial').click(function(){
-               $('#days').hide();
+               $('#days2').hide();
+               $('#days1').hide();
           });
 
           $('#CLS').click(function(){
-               $('#days').hide();
+               $('#days2').hide();
+               $('#days1').hide();
           });
      });
 </script>

@@ -180,11 +180,20 @@ $(document).ready(function(){
         //check if checkbox is checked
         if ($('#inter').is(':checked')) {
 
-            $('.days').removeAttr('disabled'); //enable input
+            $('.days2').removeAttr('disabled'); //enable input
 
         } else {
-            $('.days').removeAttr('checked');
-            $('.days').attr('disabled', true); //disable input
+            $('.days2').removeAttr('checked');
+            $('.days2').attr('disabled', true); //disable input
+        }
+        
+        if ($('#basic').is(':checked')) {
+
+            $('.days1').removeAttr('disabled'); //enable input
+
+        } else {
+            $('.days1').removeAttr('checked');
+            $('.days1').attr('disabled', true); //disable input
         }
     });
 
